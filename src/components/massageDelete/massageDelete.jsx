@@ -8,6 +8,19 @@ import Button from '@mui/material/Button';
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 
 const MassageDelete =({openDialog, setOpenDialog,id})=>{
+
+    const dispatch = useDispatch();
+
+    const handelDelete = (id) =>{
+        dispatch(DeleteItem(id))
+        setOpenDialog(false)
+    }
+
+    const handleCloseDialog =()=>{
+        setOpenDialog(false)
+    }
+
+
     return(
         <Dialog open={openDialog} onClose={handleCloseDialog} >
             <Grid container sx={{width:{xs:'250px', md:'370px'}, height:'150px', padding:'20px 10px 0 10px',gap:'20px',justifyContent:'space-between'}}>
