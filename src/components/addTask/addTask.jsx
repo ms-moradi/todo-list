@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { useDispatch } from "react-redux";
-import {AddItem , EditItem} from "../../component/redux/todoReducer/todoReducer";
+import {AddItem , EditItem} from "../../redux/todoReducer/todoReduce";
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
