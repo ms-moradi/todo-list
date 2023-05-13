@@ -6,6 +6,9 @@ import './calendar.css';
 const Calendar =({date, setDate})=>{
     return(
         <>
+            <div style={{marginTop:'60px'}}>
+                <Calendar value={date} onChange={handleClickDay}/>
+            </div>
         </>
     )
 }
