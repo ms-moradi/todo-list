@@ -19,7 +19,36 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 const Main =({search, open, setOpen, ShowCalendar})=>{
     return(
-        <></>
+        <Grid sx={{width:{xs:'100%', md:'80%'}, margin:{xs:'80px 0 0 15px',md:'100px auto 0 auto'}, display:'flex',flexDirection:'column',alignItems:{xs:'center',md:'flex-start'} }}>
+            <Box sx={{ position:'absolute',top:'5px',zIndex:'10', right:{xs:'20px',md:'40px'}, flexDirection:'row'}} display={ShowCalendar ? 'flex' : 'none'}>
+                <MyCalendar data={date} setData={setDate}/>
+            </Box>
+                <Grid container item sx={{paddingLeft:{xs:'70px', md:'280px'}}}>
+                    <Typography sx={{color:'grey', fontSize:'16px', marginBottom:'20px'}}>
+                        {moment(date).format('MMMM Do YYYY')}
+                    </Typography>
+                </Grid>
+                <Typography sx={{fontSize:'16px', color:'grey',padding:'0 10px'}}>
+                    Task
+                </Typography>
+                <Grid container item sx={{display:{xs:'none', md:'flex'},alignItems:'center',}}>
+                    <IconButton onClick={handleClickOpen}>
+                        <AddIcon sx={{color:'#ef5350'}}/>
+                    </IconButton>
+                    <Typography sx={{fontSize:'14px', color:'grey'}}>
+                        Add task
+                    </Typography>
+                </Grid>
+                <CardTask search={search} setForm={setForm} setMode={setMode} setOpen={setOpen}/> 
+                <Dialog
+                    open={open}
+                    TransitionComponent={Transition}
+                    keepMounted
+                    onClose={handleClose}
+                    aria-describedby="alert-dialog-slide-description">
+                        <AddTask form={form} setForm={setForm} mode={mode} setMode={setMode} setOpen={setOpen}/>
+                </Dialog>
+        </Grid>
     )
 }
 
