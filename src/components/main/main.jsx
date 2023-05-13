@@ -17,7 +17,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="down" ref={ref} {...props} />;
 });
 
-const Main=()=>{
+const Main =({search, open, setOpen, ShowCalendar})=>{
     return(
         <></>
     )
