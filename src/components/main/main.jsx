@@ -18,6 +18,20 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 const Main =({search, open, setOpen, ShowCalendar})=>{
+
+    const [form,setForm] = useState({id:Math.floor(Math.random()*1000), title:"" ,description:"", status:false}) 
+    const [mode ,setMode] = useState(true);
+    const [date, setDate] = useState(new Date());
+
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
+
+
     return(
         <Grid sx={{width:{xs:'100%', md:'80%'}, margin:{xs:'80px 0 0 15px',md:'100px auto 0 auto'}, display:'flex',flexDirection:'column',alignItems:{xs:'center',md:'flex-start'} }}>
             <Box sx={{ position:'absolute',top:'5px',zIndex:'10', right:{xs:'20px',md:'40px'}, flexDirection:'row'}} display={ShowCalendar ? 'flex' : 'none'}>
