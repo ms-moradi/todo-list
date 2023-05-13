@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 
-const MassageDelete =()=>{
+const MassageDelete =({openDialog, setOpenDialog,id})=>{
     return(
         <Dialog open={openDialog} onClose={handleCloseDialog} >
             <Grid container sx={{width:{xs:'250px', md:'370px'}, height:'150px', padding:'20px 10px 0 10px',gap:'20px',justifyContent:'space-between'}}>
