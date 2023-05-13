@@ -14,7 +14,26 @@ import DoneIcon from '@mui/icons-material/Done';
 
 const CardTask =({search, setForm, setMode,setOpen})=>{
 
+    const [openDialog, setOpenDialog] = useState(false)
+    const [id , setId] = useState(0)
+    const task = useSelector((state)=>state.todo);
+    const dispatch = useDispatch();
+
+    const handelEdit = (item) =>{
+        setOpen(true)
+        dispatch(EditItem(item))
+        setMode(false);
+        setForm(item);
+    }
     
+    const handleShowMassageDelete =(id)=>{
+        setOpenDialog(true)
+        setId(id)
+    }
+
+    const handelCheck = (id)=>{
+        dispatch(CheckItem(id))
+    }
 
     return(
         <>
