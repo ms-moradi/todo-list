@@ -6,8 +6,10 @@ import Grid from "@mui/material/Grid";
 
 const Home =()=>{
     return(
-        <>
-        </>
+        <Grid>
+            <Header setSearch={setSearch} setOpen={setOpen} setShowCalendar={setShowCalendar}/>
+            <Main search={search} open={open} setOpen={setOpen}  ShowCalendar={ShowCalendar}/>
+        </Grid> 
     )
 }
 
