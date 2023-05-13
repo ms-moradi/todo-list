@@ -3,7 +3,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './calendar.css';
 
-const Calendar =({date, setDate})=>{
+const MyCalendar =({date, setDate})=>{
 
     const handleClickDay=(e)=>{
         setDate(e)
@@ -18,4 +18,4 @@ const Calendar =({date, setDate})=>{
     )
 }
 
-export default Calendar;
+export default MyCalendar;

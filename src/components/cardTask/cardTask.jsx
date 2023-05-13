@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import {useSelector, useDispatch } from "react-redux";
-import {EditItem, CheckItem} from "../redux/todoReducer/todoReducer";
-import MassageDelete from "../MassageDelete/MassageDelete";
+import {EditItem, CheckItem} from "../../redux/todoReducer/todoReduce";
+import MassageDelete from "../massageDelete/massageDelete";
 import Card from '@mui/material/Card';
 import CardContent  from "@mui/material/CardContent";
 import Checkbox from '@mui/material/Checkbox';

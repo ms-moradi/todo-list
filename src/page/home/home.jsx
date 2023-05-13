@@ -1,6 +1,6 @@
 import React,{useState} from "react";
-import Header from "../../component/Header/Header";
-import Main from "../../component/Main/Main";
+import Header from "../../components/header/header";
+import Main from "../../components/main/main";
 import Grid from "@mui/material/Grid";
 
 
