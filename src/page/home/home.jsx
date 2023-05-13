@@ -5,6 +5,11 @@ import Grid from "@mui/material/Grid";
 
 
 const Home =()=>{
+
+    const [search, setSearch] = useState('');
+    const [ShowCalendar, setShowCalendar] = useState(false)
+    const [open, setOpen] = useState(false);
+
     return(
         <Grid>
             <Header setSearch={setSearch} setOpen={setOpen} setShowCalendar={setShowCalendar}/>
