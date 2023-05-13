@@ -4,6 +4,11 @@ import 'react-calendar/dist/Calendar.css';
 import './calendar.css';
 
 const Calendar =({date, setDate})=>{
+
+    const handleClickDay=(e)=>{
+        setDate(e)
+    }
+    
     return(
         <>
             <div style={{marginTop:'60px'}}>
